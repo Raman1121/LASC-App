@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.raman.lasc_app.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Enter your name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/roll"
+            android:layout_below="@+id/name"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:hint="Enter your roll number"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_below="@+id/roll"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:hint="Enter your SNU ID"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/course"
+            android:layout_below="@+id/id"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:hint="Enter the course name"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:layout_marginBottom="68dp"
+            android:text="Submit" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
