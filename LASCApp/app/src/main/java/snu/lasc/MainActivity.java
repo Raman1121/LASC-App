@@ -22,20 +22,27 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GooglePlayServicesAvailabilityIOException;
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.ExponentialBackOff;
+import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
+import com.google.api.services.sheets.v4.model.BatchUpdateValuesRequest;
+import com.google.api.services.sheets.v4.model.BatchUpdateValuesResponse;
 import com.google.api.services.sheets.v4.model.Spreadsheet;
 import com.google.api.services.sheets.v4.model.ValueRange;
 
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -55,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     static final int REQUEST_PERMISSION_GET_ACCOUNTS = 1003;
     private static final String BUTTON_TEXT = "Call Google Sheets API";
     private static final String PREF_ACCOUNT_NAME = "accountName";
+    private static final String AccessKey = "636341820699-6bteostqt4fp7fu3di98ppakjj5or19q.apps.googleusercontent.com";
     private static final String[] SCOPES = { SheetsScopes.SPREADSHEETS };
 
     @Override
@@ -247,26 +255,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
 
         private Void postDataToApi(){
             String spreadsheetId = "1FAIpQLSfErOFYrM28t3qZvpWQJttP44YvIha-RfjWtsvpPJSpT64GyA";
-            String range = "Class Data!A2:E";
-            ValueRange valueRange = null;
+            String range = "Attendance!B2:E2";
+            ValueRange valueRange = new ValueRange();
             try {
-                valueRange = this.mService.spreadsheets().values()
-                        .get(spreadsheetId, range)
-                        .execute();;
-            }
-            catch(IOException e){
-                Log.e("#",""+e);
-            }
-            if(valueRange != null) {
-                valueRange.set("Name", name);
-                valueRange.set("Roll Number", rollNumber);
-                valueRange.set("SNU Id", snuId);
-                valueRange.set("Subject", subject);
-            }
-            try {
-                this.mService.spreadsheets().values().update(spreadsheetId, range, valueRange)
-                        .setValueInputOption("RAW")
-                        .execute();
+                // Code to post data
             }
             catch(IOException e){
                 Log.e("#",""+e);
