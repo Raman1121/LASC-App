@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "450314512546",
+    "firebase_url": "https://first-project-b1da5.firebaseio.com",
+    "project_id": "first-project-b1da5",
+    "storage_bucket": "first-project-b1da5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450314512546:android:d48ba8e6c4d66595",
+        "android_client_info": {
+          "package_name": "com.example.raman.lasc_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450314512546-5lj3b7ks4bjob2fegtgb4dm8j9b8t1l8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.raman.lasc_app",
+            "certificate_hash": "5e8cbec1bc3a6726bc8957e144b34b019c5cb487"
+          }
+        },
+        {
+          "client_id": "450314512546-o03e44eb8dehjlt8qa05ld7ev7tffid8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8OyakkzSqxYsps0hJzaEDVwX3Sl5NLF8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450314512546-o03e44eb8dehjlt8qa05ld7ev7tffid8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
