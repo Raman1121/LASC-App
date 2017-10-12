@@ -257,12 +257,12 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             String spreadsheetId = "1FAIpQLSfErOFYrM28t3qZvpWQJttP44YvIha-RfjWtsvpPJSpT64GyA";
             String range = "Attendance!B2:E2";
             ValueRange valueRange = new ValueRange();
-            try {
+            //try {
                 // Code to post data
-            }
-            catch(IOException e){
-                Log.e("#",""+e);
-            }
+            //}
+            //catch(IOException e){
+              //  Log.e("#",""+e);
+            //}
             return null;
         }
 
